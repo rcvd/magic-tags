@@ -2,7 +2,7 @@
 
 Magic Tags transforms tags you specify into beautiful icons while maintaining all functionality, like backlinking and searching.
 
-![Demo of magic tags in action](screenshots/magic-tags.gif)
+![Demo of magic tags in action](https://github.com/rcvd/magic-tags/raw/main/screenshots/magic-tags.gif)
 
 ## If you want to support my work
 
@@ -23,7 +23,7 @@ Magic Tags transforms tags you specify into beautiful icons while maintaining al
 **Notes**
 You can use the same icon for multiple tags - with different colors if you like. An example of this would be a marker for high and critical tasks, which both would use the alert icon, but in yellow for high and red for critical.
 
-![Settings showing tags using the same icon but different colors](screenshots/high-critical.png)
+![Settings showing tags using the same icon but different colors](https://github.com/rcvd/magic-tags/raw/main/screenshots/high-critical.png)
 
 ## Feature Requests, Bugs, and Feedback
 
