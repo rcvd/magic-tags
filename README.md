@@ -14,7 +14,7 @@ Magic Tags transforms tags you specify into beautiful icons while maintaining al
 
 ## How does it work
 
-- Select the Icon Theme. Blueprint is the default for Roam Research. Roam Studio provides Feather Icons.
+- Select the Icon Theme. [Blueprint](https://blueprintjs.com/docs/versions/3/#icons) is the default for Roam Research. Roam Studio provides [Feather Icons](https://feathericons.com/).
 - Select the first magic word - this is the name of the tag (e.g., if your tag is #love, your magic word is "love")
 - Select an icon from the predefined list
 - Select a color from the predefined list
