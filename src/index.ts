@@ -120,7 +120,7 @@ function createCSS(id: number) {
   line_height = "26px";
   
   if (document.getElementById("roamstudio-css-system")) {
-    line_height = "calc(var(--fs-main) + 12px)";
+    line_height = "calc(var(--fs-main) + 8px)";
   }
     
   if (word != "" && icon != "" && color != "" && color != "") {
