@@ -111,16 +111,16 @@ var settings: { [key: string]: string } = {
 extAPI: OnloadArgs["extensionAPI"];
 
 function createCSS(id: number) {
-  var word: String, icon: String, color: String, lightness: String, line-height: String;
+  var word: String, icon: String, color: String, lightness: String, line_height: String;
     
   word = settings["mt-"+id+"-word"].toString();
   color = settings["mt-"+id+"-color"].toString();
   icon =settings["mt-"+id+"-icon"].toString();
   lightness = settings["mt-"+id+"-lightness"].toString();
-  line-height = "26px";
+  line_height = "26px";
   
   if (document.getElementById("roamstudio-css-system")) {
-    line-height = "calc(var(--fs-main) + 8px)";
+    line_height = "calc(var(--fs-main) + 8px)";
   }
     
   if (word != "" && icon != "" && color != "" && color != "") {
@@ -165,7 +165,7 @@ function createCSS(id: number) {
       height: 18px;
       visibility: visible;
       display: inline-block;
-      line-height: ${line-height};
+      line-height: ${line_height};
       content: "";
       background-color: var(--cl-${color}-${lightness}, ${color});
       margin-bottom: -4px;
