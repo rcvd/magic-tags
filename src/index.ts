@@ -158,9 +158,10 @@ function createCSS(id: number) {
     return `.rm-page-ref[data-tag="${word}"] {
       display: inline-block;
       font-size: 0px;
+      background: transparent!important;
     }
     
-    .rm-page-ref[data-tag="${word}"] {
+    .rm-page-ref[data-tag="${word}"]::after {
       width: 18px;
       height: 18px;
       visibility: visible;
@@ -169,8 +170,6 @@ function createCSS(id: number) {
       content: "";
       background-color: var(--cl-${color}-${lightness}, ${color});
       margin-bottom: -4px;
-      padding-top: 2px;
-      padding-bottom: 2px;
       mask: url("${icon}") no-repeat 50% 50%;
       -webkit-mask: url("${icon}") no-repeat 50% 50%;
       mask-size: cover;
