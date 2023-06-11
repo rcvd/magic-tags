@@ -159,6 +159,8 @@ function createCSS(id: number) {
       display: inline-block;
       font-size: 0px;
       background: transparent!important;
+      padding: 0!important;
+      height: 18px;
     }
     
     .rm-page-ref[data-tag="${word}"]::after {
