@@ -116,7 +116,7 @@ export const feather_items = [
   // "folder",
   // "framer",
   // "frown",
-  // "gift",
+  "gift",
   // "git-branch",
   // "git-commit",
   // "git-merge",
