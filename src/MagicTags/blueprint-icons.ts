@@ -522,7 +522,7 @@ export const blueprint_items=[
 // "thumbs-up",
 // "tick-circle",
 // "tick",
-// "time",
+"time",
 // "timeline-area-chart",
 // "timeline-bar-chart",
 // "timeline-events",

@@ -56,7 +56,7 @@ export const feather_items = [
   // "chevrons-up",
   // "clipboard",
   // "circle",
-  // "clock",
+  "clock",
   // "cloud-drizzle",
   // "cloud-lightning",
   // "cloud-off",
