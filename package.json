@@ -6,8 +6,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack --watch",
-    "add_css": "sh add_css.sh"
+    "start": "webpack --watch"
   },
   "license": "MIT",
   "devDependencies": {
