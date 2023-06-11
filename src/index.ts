@@ -169,6 +169,8 @@ function createCSS(id: number) {
       content: "";
       background-color: var(--cl-${color}-${lightness}, ${color});
       margin-bottom: -4px;
+      padding-top: 2px;
+      padding-bottom: 2px;
       mask: url("${icon}") no-repeat 50% 50%;
       -webkit-mask: url("${icon}") no-repeat 50% 50%;
       mask-size: cover;
