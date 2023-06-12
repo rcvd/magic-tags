@@ -20,7 +20,7 @@ export const items = [
   "drop",
   "eye",
   "help",
-	"heart",
+  "heart",
   "idea",
   "issue",
   "image",
@@ -43,15 +43,15 @@ export const items = [
   "youtube",
 ];
 
-let lookup: string[2]; 
+let lookup: string[2];
 
 export var icon_lookup = {
-  "alert": ["warning-sign","alert-triangle"],
-  "archive": ["archive","archive"],
-  "award": ["endorsed","award"],
-  "ban": ["ban-circle", "slash"],
-  "bell": ["notifications", "bell"],
-  "book": ["book", "book"],
+  alert: ["warning-sign", "alert-triangle"],
+  archive: ["archive", "archive"],
+  award: ["endorsed", "award"],
+  ban: ["ban-circle", "slash"],
+  bell: ["notifications", "bell"],
+  book: ["book", "book"],
   bookmark: ["bookmark", "bookmark"],
   box: ["box", "package"],
   calendar: ["calendar", "calendar"],
@@ -66,7 +66,7 @@ export var icon_lookup = {
   draw: ["draw", "pen-tool"],
   drop: ["tint", "droplet"],
   eye: ["eye-open", "eye"],
-	heart: ["heart", "heart"],
+  heart: ["heart", "heart"],
   help: ["help", "help-circle"],
   idea: ["lightbulb", "zap"],
   issue: ["issue", "alert-circle"],
@@ -86,6 +86,6 @@ export var icon_lookup = {
   tool: ["build", "tool"],
   user: ["user", "user"],
   users: ["people", "users"],
-  video: ["mobile video", "video"],
-  "youtube": ["video","youtube"],
+  video: ["mobile-video", "video"],
+  youtube: ["video", "youtube"],
 };
