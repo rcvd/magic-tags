@@ -306,7 +306,7 @@ function createSettings(extensionAPI: any) {
     },
   });
 
-  for (let i = 0; i < 25; i++) {
+  for (let i = 1; i <= 25; i++) {
     mySettings.push({
       id: "mt-" + i + "-word",
       name: "Magic Word",
