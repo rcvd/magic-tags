@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "roamjs-components": "^0.74.19",
-    "roamjs-scripts": "^0.22.4"
+    "roamjs-scripts": "^0.27.0"
   }
 }

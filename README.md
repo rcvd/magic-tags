@@ -25,7 +25,7 @@ You can use the same icon for multiple tags - with different colors if you like.
 
 ![Settings showing tags using the same icon but different colors](https://github.com/rcvd/magic-tags/raw/main/screenshots/high-critical.png)
 
-## Feature Requests, Bugs, and Feedback
+## Feature Requests, Bugs, and FeedbackΩ
 
-If you need an additional icon, have an idea for a new feature, or find a bug, file it under [Issues](https://github.com/rcvd/Magic-Tags/issues) with a short description and a screenshot.
+If you need an additional icon, have an idea for a new feature, or find a bug, file it under [Issues](https://github.com/rcvd/magic-tags/issues) with a short description and a screenshot.
 If you have any additional comments or suggestions, please send them to alex@goedel.io.
