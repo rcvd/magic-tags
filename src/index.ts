@@ -142,15 +142,18 @@ function compileColor(color: string, lightness: number, invert: boolean) {
 }
 
 function createCSS(id: number) {
-    var word: string,
+    var wordArray: Array<string>,
+        word: string,
         icon: string,
         color: string,
         lightness: string,
-        lightnessDark: string,
         line_height: string,
-        css: string;
+        css: string = "";
+
 
     word = settings["mt-" + id + "-word"].toString();
+    wordArray = word.split(";");
+
     color = settings["mt-" + id + "-color"].toString();
     icon = settings["mt-" + id + "-icon"].toString();
     lightness = settings["mt-" + id + "-lightness"].toString();
@@ -160,123 +163,125 @@ function createCSS(id: number) {
         line_height = "calc(var(--fs-main) + 8px)";
     }
 
-    if (word != "" && icon != "" && color != "" && color != "") {
-        if (settings["icon-theme"] == "Feather") {
-            icon = feather_icons[icon_lookup[settings["mt-" + id + "-icon"]][1]];
-        } else {
-            icon = blueprint_icons[icon_lookup[settings["mt-" + id + "-icon"]][0]];
-        }
+    wordArray.forEach(magicword => {
+        if (magicword.trim() != "" && icon != "" && color != "" && color != "") {
+            if (settings["icon-theme"] == "Feather") {
+                icon = feather_icons[icon_lookup[settings["mt-" + id + "-icon"]][1]];
+            } else {
+                icon = blueprint_icons[icon_lookup[settings["mt-" + id + "-icon"]][0]];
+            }
 
-        switch (lightness) {
-            case "lightest":
-                lightness = "100";
-                break;
-            case "lighter":
-                lightness = "200";
-                break;
-            case "light":
-                lightness = "300";
-                break;
-            case "medium":
-                lightness = "500";
-                break;
-            case "dark":
-                lightness = "600";
-                break;
-            case "darker":
-                lightness = "800";
-                break;
-            case "darkest":
-                lightness = "900";
-                break;
-        }
+            switch (lightness) {
+                case "lightest":
+                    lightness = "100";
+                    break;
+                case "lighter":
+                    lightness = "200";
+                    break;
+                case "light":
+                    lightness = "300";
+                    break;
+                case "medium":
+                    lightness = "500";
+                    break;
+                case "dark":
+                    lightness = "600";
+                    break;
+                case "darker":
+                    lightness = "800";
+                    break;
+                case "darkest":
+                    lightness = "900";
+                    break;
+            }
 
-        if (mode == 0 || mode == 2) {
-            css = `.rm-page-ref[data-tag="${word}"] {
-        border-bottom: none!important;
-        display: inline-block;
-        font-size: 0px;
-        background: transparent!important;
-        padding: 0!important;
-        height: 18px;
-      }
-      
-      .rm-page-ref[data-tag="${word}"]::after {
-        width: 18px;
-        height: 18px;
-        visibility: visible;
-        display: inline-block;
-        line-height: ${line_height};
-        content: "";
-        background-color: ${compileColor(color, parseInt(lightness.toString()), false)};
-        margin-bottom: -4px;
-        mask: url("${icon}") no-repeat 50% 50%;
-        -webkit-mask: url("${icon}") no-repeat 50% 50%;
-        mask-size: cover;
-        -webkit-mask-size: cover;
-      }`;
-        }
+            if (mode == 0 || mode == 2) {
+                css = css + `.rm-page-ref[data-tag="${magicword.trim()}"] {
+            border-bottom: none!important;
+            display: inline-block;
+            font-size: 0px;
+            background: transparent!important;
+            padding: 0!important;
+            height: 18px;/**/
+          }
+          
+          .rm-page-ref[data-tag="${magicword.trim()}"]::after {
+            width: 18px;
+            height: 18px;
+            visibility: visible;
+            display: inline-block;
+            line-height: ${line_height};
+            content: "";
+            background-color: ${compileColor(color, parseInt(lightness.toString()), false)};
+            margin-bottom: -4px;
+            mask: url("${icon}") no-repeat 50% 50%;
+            -webkit-mask: url("${icon}") no-repeat 50% 50%;
+            mask-size: cover;
+            -webkit-mask-size: cover;
+          }`;
+            }
 
-        if (mode == 1) {
-            css = `.rm-page-ref[data-tag="${word}"] {
-        border-bottom: none!important;
-        display: inline-block;
-        font-size: 0px;
-        background: transparent!important;
-        padding: 0!important;
-        height: 18px;
-      }
-      
-      .rm-page-ref[data-tag="${word}"]::after {
-        width: 18px;
-        height: 18px;
-        visibility: visible;
-        display: inline-block;
-        line-height: ${line_height};
-        content: "";
-        background-color: ${compileColor(color, parseInt(lightness.toString()), false)};
-        margin-bottom: -4px;
-        mask: url("${icon}") no-repeat 50% 50%;
-        -webkit-mask: url("${icon}") no-repeat 50% 50%;
-        mask-size: cover;
-        -webkit-mask-size: cover;
-      }
-      
-      @media (prefers-color-scheme: dark) {
-        .rm-page-ref[data-tag="${word}"]::after {
-          background-color: ${compileColor(color, parseInt(lightness.toString()), true)};
-        }
-      }`;
-        }
+            if (mode == 1) {
+                css = css + `.rm-page-ref[data-tag="${magicword.trim()}"] {
+            border-bottom: none!important;
+            display: inline-block;
+            font-size: 0px;
+            background: transparent!important;
+            padding: 0!important;
+            height: 18px;
+          }
+          
+          .rm-page-ref[data-tag="${magicword.trim()}"]::after {
+            width: 18px;
+            height: 18px;
+            visibility: visible;
+            display: inline-block;
+            line-height: ${line_height};
+            content: "";
+            background-color: ${compileColor(color, parseInt(lightness.toString()), false)};
+            margin-bottom: -4px;
+            mask: url("${icon}") no-repeat 50% 50%;
+            -webkit-mask: url("${icon}") no-repeat 50% 50%;
+            mask-size: cover;
+            -webkit-mask-size: cover;
+          }
+          
+          @media (prefers-color-scheme: dark) {
+            .rm-page-ref[data-tag="${magicword.trim()}"]::after {
+              background-color: ${compileColor(color, parseInt(lightness.toString()), true)};
+            }
+          }`;
+            }
 
-        if (mode == 3) {
-            css = `.rm-page-ref[data-tag="${word}"] {
-        border-bottom: none!important;
-        display: inline-block;
-        font-size: 0px;
-        background: transparent!important;
-        padding: 0!important;
-        height: 18px;
-      }
-      
-      .rm-page-ref[data-tag="${word}"]::after {
-        width: 18px;
-        height: 18px;
-        visibility: visible;
-        display: inline-block;
-        line-height: ${line_height};
-        content: "";
-        background-color: ${compileColor(color, parseInt(lightness.toString()), true)};
-        margin-bottom: -4px;
-        mask: url("${icon}") no-repeat 50% 50%;
-        -webkit-mask: url("${icon}") no-repeat 50% 50%;
-        mask-size: cover;
-        -webkit-mask-size: cover;
-      }`;
+            if (mode == 3) {
+                css = css + `.rm-page-ref[data-tag="${magicword.trim()}"] {
+            border-bottom: none!important;
+            display: inline-block;
+            font-size: 0px;
+            background: transparent!important;
+            padding: 0!important;
+            height: 18px;
+          }
+          
+          .rm-page-ref[data-tag="${magicword.trim()}"]::after {
+            width: 18px;
+            height: 18px;
+            visibility: visible;
+            display: inline-block;
+            line-height: ${line_height};
+            content: "";
+            background-color: ${compileColor(color, parseInt(lightness.toString()), true)};
+            margin-bottom: -4px;
+            mask: url("${icon}") no-repeat 50% 50%;
+            -webkit-mask: url("${icon}") no-repeat 50% 50%;
+            mask-size: cover;
+            -webkit-mask-size: cover;
+          }`;
+            }
         }
+    });
 
-        return css;
-    }
+    return css;
 }
 
 function learnSpells() {
@@ -423,7 +428,6 @@ function addColorScheme() {
     if (!document.getElementById("roamstudio-css-system")) {
         var head = document.getElementsByTagName("head")[0];
         var style = document.createElement("style");
-        var i: number;
         style.id = "magic-tags-colors";
         style.textContent = color_scheme;
 
