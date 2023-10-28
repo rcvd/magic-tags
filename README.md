@@ -14,8 +14,8 @@ Magic Tags transforms tags you specify into beautiful icons while maintaining al
 
 ## How does it work
 
-- Select the Icon Theme. [Blueprint](https://blueprintjs.com/docs/versions/3/#icons) is the default for Roam Research. Roam Studio provides [Feather Icons](https://feathericons.com/).
-- Select the first magic word - this is the name of the tag (e.g., if your tag is #love, your magic word is "love")
+- Select the Icon Theme. [Blueprint](https://blueprintjs.com/docs/versions/3/#icons) is the default for Roam Research. Roam Studio provides [Feather Icons](https://feathericons.com/)/[Lucide](https://lucide.dev/).
+- Select the first magic word - this is the name of the tag (e.g., if your tag is #love, your magic word is "love"), you can add additional magic words seperated with semicolon
 - Select an icon from the predefined list
 - Select a color from the predefined list
 - Select the lightness of the color
@@ -25,7 +25,10 @@ You can use the same icon for multiple tags - with different colors if you like.
 
 ![Settings showing tags using the same icon but different colors](https://github.com/rcvd/magic-tags/raw/main/screenshots/high-critical.png)
 
-## Feature Requests, Bugs, and FeedbackΩ
+## Feature Requests, Bugs, and Feedback
 
 If you need an additional icon, have an idea for a new feature, or find a bug, file it under [Issues](https://github.com/rcvd/magic-tags/issues) with a short description and a screenshot.
 If you have any additional comments or suggestions, please send them to alex@goedel.io.
+
+## Changelog
+- 2023/10/28: Added five new icons (chevron-left, chevron-right, credit-card, github, gitlab)
