@@ -1,4 +1,19 @@
 {
-  "include": ["src/index.ts"],
-  "exclude": ["node_modules", "src/MagicTags"]
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es2020",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "removeComments": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo",
+    "isolatedModules": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

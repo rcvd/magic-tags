@@ -1,22 +1,41 @@
 {
-  "name": "magictags",
+  "name": "magic-tags",
   "version": "1.0.0",
-  "description": "Magical tags for Roam Research",
-  "main": "src/index.ts",
+  "description": "A Roam Research extension for magic tags.",
+  "main": "extension.js",
+  "author": "Alexander Rink <alex@rcvd.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/magictags.git"
+  },
+  "keywords": [
+    "roam-research",
+    "roamjs",
+    "magictags"
+  ],
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch",
-    "start": "webpack --watch"
+    "dev": "webpack --mode development --watch"
   },
-  "license": "MIT",
   "devDependencies": {
-    "ts-loader": "^9.4.1",
-    "typescript": "^4.8.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "@blueprintjs/core": "^3.54.0",
+    "@blueprintjs/icons": "^3.33.0",
+    "@types/react": "^17.0.2",
+    "copy-webpack-plugin": "^13.0.1",
+    "react": "^17.0.2",
+    "roamjs-components": "^0.86.5",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "roamjs-components": "^0.74.19",
-    "roamjs-scripts": "^0.27.0"
-  }
+    "lucide-static": "^0.563.0"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yourusername/magictags/issues"
+  },
+  "homepage": "https://github.com/yourusername/magictags#readme"
 }

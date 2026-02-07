@@ -1,35 +1,46 @@
+const path = require('path');
+
 module.exports = {
-  entry: "./src/index.ts",
+  entry: './src/extension.ts',
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    '@blueprintjs/core': ['Blueprint', 'Core'],
+  },
+  externalsType: 'window',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+          },
+        },
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/inline',
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: ['.tsx', '.ts', '.js'],
   },
-  externals: {
-    react: "React",
-    "chrono-node": "ChronoNode",
-  },
-  externalsType: "window",
   output: {
-    filename: "extension.js",
-    path: __dirname,
+    filename: 'extension.js',
+    path: path.resolve(__dirname),
     library: {
-      type: "module",
+      type: 'module',
     },
+    clean: false,
   },
   experiments: {
     outputModule: true,
   },
-  mode: "production",
-  // turns off warning about file size
-  performance: {
-    hints: false,
-  },
+  plugins: [],
+  devtool: 'source-map',
+  mode: 'production',
 };

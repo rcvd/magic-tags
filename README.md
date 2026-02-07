@@ -1,34 +1,20 @@
 # Magic Tags
+Magic Tags transforms the tags you specify into beautiful icons while preserving all functionality, such as backlinking and searching.
 
-Magic Tags transforms tags you specify into beautiful icons while maintaining all functionality, like backlinking and searching.
+![Settings](screenshots/magic-tags.gif)
 
-![Demo of magic tags in action](https://github.com/rcvd/magic-tags/raw/main/screenshots/magic-tags.gif)
+- Icon Theme: Choose between Blueprint and Feather (Lucide) icon sets globally.
+- Tag Name: The exact text of the tag (without #).
+- Icon: Select an icon to replace the tag.
+- Color: Choose from a variety of Blueprint colors. The extension automatically switches to a lighter variant when Roam is in dark mode or based on your system appearance setting (@media prefers-color-scheme: dark).
+- Import/Export: Backup and restore your magic tag configurations easily via JSON files.
 
-## If you want to support my work
+## Settings 
+![Settings](screenshots/settings.png)
 
-- [Become a GitHub Sponsor](https://github.com/sponsors/rcvd)
-- [Buy Me a Coffee](https://www.buymeacoffee.com/rcvdio)
-- [Become a supporter on gödel.io](https://www.goedel.io/subscribe?utm_medium=web&utm_source=subscribe-widget&utm_content=47299057)
-- [Flattr](https://flattr.com/@rcvd)
-- [Paypal](https://paypal.me/rcvd)
-
-## How does it work
-
-- Select the Icon Theme. [Blueprint](https://blueprintjs.com/docs/versions/3/#icons) is the default for Roam Research. Roam Studio provides [Feather Icons](https://feathericons.com/)/[Lucide](https://lucide.dev/).
-- Select the first magic word - this is the name of the tag (e.g., if your tag is #love, your magic word is "love"), you can add additional magic words seperated with semicolon
-- Select an icon from the predefined list
-- Select a color from the predefined list
-- Select the lightness of the color
-
-**Notes**
+## Notes
 You can use the same icon for multiple tags - with different colors if you like. An example of this would be a marker for high and critical tasks, which both would use the alert icon, but in yellow for high and red for critical.
 
-![Settings showing tags using the same icon but different colors](https://github.com/rcvd/magic-tags/raw/main/screenshots/high-critical.png)
-
 ## Feature Requests, Bugs, and Feedback
-
-If you need an additional icon, have an idea for a new feature, or find a bug, file it under [Issues](https://github.com/rcvd/magic-tags/issues) with a short description and a screenshot.
+If you have an idea for a new feature, new icon theme, or find a bug, file it under [Issues](https://github.com/rcvd/MagicTags/issues) with a short description and a screenshot.
 If you have any additional comments or suggestions, please send them to alex@goedel.io.
-
-## Changelog
-- 2023/10/28: Added five new icons (chevron-left, chevron-right, credit-card, github, gitlab)

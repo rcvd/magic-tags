@@ -1,0 +1,8 @@
+{
+  "name": "magictags",
+  "id": "magictags",
+  "description": "A Roam Research extension for magictags.",
+  "entry": "dist/extension.js",
+  "author": "Your Name",
+  "version": "1.0.0"
+}
