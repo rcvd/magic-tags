@@ -39,6 +39,8 @@ export interface ColorDefinition {
 }
 
 export const BLUEPRINT_COLORS: ColorDefinition[] = [
+  { name: "Black/White", appearance: "light", value: "#10161A" },
+  { name: "Black/White", appearance: "dark", value: "#ffffff" },
   { name: "Blue", appearance: "light", value: "#137cbd" },
   { name: "Blue", appearance: "dark", value: "#48aff0" },
   { name: "Green", appearance: "light", value: "#0f9960" },

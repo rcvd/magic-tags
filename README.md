@@ -1,7 +1,7 @@
 # Magic Tags
 Magic Tags transforms the tags you specify into beautiful icons while preserving all functionality, such as backlinking and searching.
 
-![Settings](screenshots/magic-tags.gif)
+![Settings](https://raw.githubusercontent.com/rcvd/magic-tags/refs/heads/main/screenshots/magic-tags.gif)
 
 - Icon Theme: Choose between Blueprint and Feather (Lucide) icon sets globally.
 - Tag Name: The exact text of the tag (without #).
@@ -10,7 +10,7 @@ Magic Tags transforms the tags you specify into beautiful icons while preserving
 - Import/Export: Backup and restore your magic tag configurations easily via JSON files.
 
 ## Settings 
-![Settings](screenshots/settings.png)
+![Settings](https://raw.githubusercontent.com/rcvd/magic-tags/refs/heads/main/screenshots/settings.png)
 
 ## Notes
 You can use the same icon for multiple tags - with different colors if you like. An example of this would be a marker for high and critical tasks, which both would use the alert icon, but in yellow for high and red for critical.
