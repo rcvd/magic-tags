@@ -143,6 +143,9 @@ export const generateCSS = (rules: MagicTagRule[], theme: IconTheme = "blueprint
           visibility: visible;
           cursor: pointer;
         }
+        .rs-light ${tagSelector}::before {
+          color: ${lightThemeColor};
+        }
         .rs-dark ${tagSelector}::before {
           color: ${darkThemeColor};
         }
